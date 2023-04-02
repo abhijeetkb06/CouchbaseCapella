@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-221.5921.22">
+    <data-source name="CouchbaseDB" uuid="b8f71336-fe2d-42a4-a3c8-880ccf59d8c0">
+      <database-info product="Couchbase Enterprise" version="7.1" jdbc-version="4.2" driver-name="Couchbase JDBC Driver" driver-version="0.6.0" dbms="COUCHBASE" exact-version="7.1" exact-driver-version="0.5">
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>Administrator</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>

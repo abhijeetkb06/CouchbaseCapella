@@ -1,33 +1,26 @@
 package org.capella.connection;
 
-import java.time.Duration;
-
-import com.couchbase.client.core.env.SecurityConfig;
 import com.couchbase.client.core.error.CouchbaseException;
 import com.couchbase.client.core.error.DocumentExistsException;
 import com.couchbase.client.java.Bucket;
 import com.couchbase.client.java.Cluster;
-import com.couchbase.client.java.ClusterOptions;
 import com.couchbase.client.java.Collection;
-import com.couchbase.client.java.env.ClusterEnvironment;
 import com.couchbase.client.java.json.JsonObject;
-import com.couchbase.client.java.kv.CounterResult;
-import com.couchbase.client.java.kv.GetResult;
-import com.couchbase.client.java.kv.IncrementOptions;
 import com.couchbase.client.java.kv.MutationResult;
-import com.couchbase.client.java.query.QueryResult;
 
-public class Main {
+import java.time.Duration;
+
+public class Local {
     // Update these variables to point to your Couchbase Capella instance and
     // credentials.
-    static String connectionString = "couchbases://cb.j3sjw33zxxigyzf.cloud.couchbase.com";
-    static String username = "abhijeet";
-    static String password = "Password@P1";
+    static String connectionString = "127.0.0.1";
+    static String username = "Administrator";
+    static String password = "password";
     static String bucketName = "beer-sample";
 
     public static void main(String... args) {
 
-        Cluster cluster = Cluster.connect(connectionString, username, password);
+        Cluster cluster = Cluster.connect("127.0.0.1", "Administrator", "password");
 
 
         // get a bucket reference
@@ -40,7 +33,7 @@ public class Main {
 
         // Upsert Document
 
-        // Get Document
+      /*  // Get Document
         GetResult getResult = bucket.defaultCollection().get("21st_amendment_brewery_cafe");
 
         String name = getResult.contentAsObject().getString("name");
@@ -52,15 +45,15 @@ public class Main {
         // Return the result rows with the rowsAsObject() method and print to the
         // terminal.
         System.out.println(result.rowsAsObject());
-
+*/
 
         Collection beerColl = bucket.defaultCollection();
 
-
+//        System.out.println(beerColl.get("doc::001").contentAsObject().get("name"));
         try {
             JsonObject beerDocument = JsonObject.create().put("abv", 4.2);
             beerDocument.put("brewery_id", "Abhijeet");
-//            beerDocument.put("brewery_id", "Abhijeet");
+            beerDocument.put("brewery_id", "Abhijeet");
             beerDocument.put("category", "xyz");
             beerDocument.put("description", "Traditional Style Ale");
             beerDocument.put("ibu", 0);
@@ -69,13 +62,13 @@ public class Main {
             beerDocument.put("style", "Special Bitter");
             beerDocument.put("type", "beer");
             beerDocument.put("upc", 0);
-            MutationResult insertResult = beerColl.insert("AbhijeetDoc7", beerDocument);
-
-            System.out.println(beerColl.get("AbhijeetDoc8").contentAsObject());
+            MutationResult insertResult = beerColl.insert("AbhijeetDoc2", beerDocument);
+            System.out.println(beerColl.get("AbhijeetDoc2").contentAsObject());
+//            System.out.println(insertResult);
         } catch (DocumentExistsException ex) {
-            System.err.println("The document already exists!");
+            ex.printStackTrace();
         } catch (CouchbaseException ex) {
-            System.err.println("Something else happened: " + ex);
+           ex.printStackTrace();
         }
 
         int i=0;

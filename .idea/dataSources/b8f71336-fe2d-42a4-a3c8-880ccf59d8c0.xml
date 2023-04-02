@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="CouchbaseDB">
+  <database-model serializer="dbm" dbms="COUCHBASE" family-id="COUCHBASE" format-version="4.40">
+    <root id="1">
+      <ServerVersion>7.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="default">
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="system"/>
+  </database-model>
+</dataSource>
