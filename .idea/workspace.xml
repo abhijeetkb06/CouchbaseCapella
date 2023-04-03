@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d25aa15c-d9f1-491a-8848-4eafabdd3ae8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CapellaConnection/src/main/java/org/capella/connection/CloudConnect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CapellaConnection/src/main/java/org/capella/connection/Local.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CapellaConnection/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CapellaConnection/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CapellaConnection/src/main/java/org/capella/connection/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/CapellaConnection/src/main/java/org/capella/connection/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CapellaConnection/target/classes/org/capella/connection/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/CapellaConnection/target/classes/org/capella/connection/Main.class" afterDir="false" />
-    </list>
+    <list default="true" id="d25aa15c-d9f1-491a-8848-4eafabdd3ae8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,7 +122,7 @@
       <workItem from="1673281726397" duration="756000" />
       <workItem from="1673384356421" duration="531000" />
       <workItem from="1680408881613" duration="2999000" />
-      <workItem from="1680411891446" duration="1003000" />
+      <workItem from="1680411891446" duration="1688000" />
     </task>
     <servers />
   </component>
